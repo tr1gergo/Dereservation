@@ -1,0 +1,7 @@
+algorithm,matched,original_reserved,ED_seats,choice_blocks,assignment
+DA,6,3,0,0,"{1: 'g', 2: 'g', 3: 'g', 4: 'OBC', 5: 'SC', 6: 'ST'}"
+Multi-run DA,6,1,2,0,"{1: 'g', 2: 'g', 3: 'g', 4: 'OBC', 5: 'OBC', 6: 'OBC'}"
+BT,6,1,2,0,"{1: 'g', 2: 'g', 3: 'g', 4: 'OBC', 5: 'OBC', 6: 'OBC'}"
+MD,8,3,2,0,"{1: 'g', 2: 'g', 3: 'g', 4: 'OBC', 6: 'ST', 7: 'OBC', 5: 'SC', 8: 'OBC'}"
+RP,8,4,1,0,"{1: 'g', 2: 'g', 3: 'OBC', 4: 'OBC', 5: 'SC', 6: 'ST', 7: 'g', 8: 'OBC'}"
+Merit,8,3,2,0,"{1: 'g', 2: 'g', 3: 'g', 4: 'OBC', 6: 'ST', 7: 'OBC', 5: 'SC', 8: 'OBC'}"

@@ -1,0 +1,570 @@
+{
+  "algorithms": {
+    "indian": [
+      {
+        "engine": "incremental",
+        "kind": "DA",
+        "lambda": null,
+        "name": "DA",
+        "policy": null
+      },
+      {
+        "engine": "incremental",
+        "kind": "Multi-run DA",
+        "lambda": null,
+        "name": "Multi-run DA",
+        "policy": null
+      },
+      {
+        "engine": "incremental",
+        "kind": "BT",
+        "lambda": null,
+        "name": "BT",
+        "policy": null
+      },
+      {
+        "engine": "incremental",
+        "kind": "weighted",
+        "lambda": "0",
+        "name": "MD",
+        "policy": "MD"
+      },
+      {
+        "engine": "incremental",
+        "kind": "weighted",
+        "lambda": "0",
+        "name": "RP",
+        "policy": "RP"
+      },
+      {
+        "engine": "incremental",
+        "kind": "weighted",
+        "lambda": "0",
+        "name": "Merit",
+        "policy": "Merit"
+      }
+    ],
+    "overlapping": [
+      {
+        "engine": "incremental",
+        "kind": "DA-open",
+        "lambda": null,
+        "name": "DA-open",
+        "policy": null
+      },
+      {
+        "engine": "incremental",
+        "kind": "Smart-Hard-Reserves",
+        "lambda": null,
+        "name": "Smart-Hard-Reserves",
+        "policy": null
+      },
+      {
+        "engine": "incremental",
+        "kind": "Soft-Reserves",
+        "lambda": null,
+        "name": "Soft-Reserves",
+        "policy": null
+      },
+      {
+        "engine": "incremental",
+        "kind": "weighted",
+        "lambda": "0",
+        "name": "MD",
+        "policy": "MD"
+      },
+      {
+        "engine": "incremental",
+        "kind": "weighted",
+        "lambda": "0",
+        "name": "RP",
+        "policy": "RP"
+      },
+      {
+        "engine": "incremental",
+        "kind": "weighted",
+        "lambda": "0",
+        "name": "Merit",
+        "policy": "Merit"
+      }
+    ]
+  },
+  "archive": {
+    "description": "Published subset of the recorded simulations. Source hash and wall-clock times describe the original runs.",
+    "paired_market_count": 3200,
+    "profile": "paper"
+  },
+  "base_seed": 271828,
+  "ci": "normal approximation: mean +/- 1.96 * sample SD / sqrt(n); paired differences use paired samples",
+  "packages": {
+    "gurobipy": "13.0.2",
+    "matplotlib": "3.11.0",
+    "networkx": "3.6.1",
+    "numpy": "2.5.1",
+    "pandas": "3.0.3"
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.14",
+  "repetitions": 100,
+  "save_assignments": false,
+  "scenarios": [
+    {
+      "axis": "obc_population",
+      "name": "indian_obc_population=0.02",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "obc_population": 0.02,
+        "preference_length": 10
+      },
+      "regime": "indian",
+      "value": 0.02
+    },
+    {
+      "axis": "obc_population",
+      "name": "indian_obc_population=0.08",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "obc_population": 0.08,
+        "preference_length": 10
+      },
+      "regime": "indian",
+      "value": 0.08
+    },
+    {
+      "axis": "obc_population",
+      "name": "indian_obc_population=0.15",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "obc_population": 0.15,
+        "preference_length": 10
+      },
+      "regime": "indian",
+      "value": 0.15
+    },
+    {
+      "axis": "obc_population",
+      "name": "indian_obc_population=0.27",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "obc_population": 0.27,
+        "preference_length": 10
+      },
+      "regime": "indian",
+      "value": 0.27
+    },
+    {
+      "axis": "obc_population",
+      "name": "indian_obc_population=0.4",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "obc_population": 0.4,
+        "preference_length": 10
+      },
+      "regime": "indian",
+      "value": 0.4
+    },
+    {
+      "axis": "overlap",
+      "name": "overlapping_overlap=0.0",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "overlap": 0.0,
+        "preference_length": 10
+      },
+      "regime": "overlapping",
+      "value": 0.0
+    },
+    {
+      "axis": "overlap",
+      "name": "overlapping_overlap=0.25",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "overlap": 0.25,
+        "preference_length": 10
+      },
+      "regime": "overlapping",
+      "value": 0.25
+    },
+    {
+      "axis": "overlap",
+      "name": "overlapping_overlap=0.5",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "overlap": 0.5,
+        "preference_length": 10
+      },
+      "regime": "overlapping",
+      "value": 0.5
+    },
+    {
+      "axis": "overlap",
+      "name": "overlapping_overlap=0.75",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "overlap": 0.75,
+        "preference_length": 10
+      },
+      "regime": "overlapping",
+      "value": 0.75
+    },
+    {
+      "axis": "overlap",
+      "name": "overlapping_overlap=1.0",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "overlap": 1.0,
+        "preference_length": 10
+      },
+      "regime": "overlapping",
+      "value": 1.0
+    },
+    {
+      "axis": "capacity_ratio",
+      "name": "indian_capacity_ratio=0.75",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "capacity_ratio": 0.75,
+        "num_institutions": 20,
+        "num_students": 600,
+        "preference_length": 10
+      },
+      "regime": "indian",
+      "value": 0.75
+    },
+    {
+      "axis": "capacity_ratio",
+      "name": "indian_capacity_ratio=1.0",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "capacity_ratio": 1.0,
+        "num_institutions": 20,
+        "num_students": 600,
+        "preference_length": 10
+      },
+      "regime": "indian",
+      "value": 1.0
+    },
+    {
+      "axis": "capacity_ratio",
+      "name": "indian_capacity_ratio=1.25",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "capacity_ratio": 1.25,
+        "num_institutions": 20,
+        "num_students": 600,
+        "preference_length": 10
+      },
+      "regime": "indian",
+      "value": 1.25
+    },
+    {
+      "axis": "preference_length",
+      "name": "indian_preference_length=1",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "preference_length": 1
+      },
+      "regime": "indian",
+      "value": 1
+    },
+    {
+      "axis": "preference_length",
+      "name": "indian_preference_length=10",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "preference_length": 10
+      },
+      "regime": "indian",
+      "value": 10
+    },
+    {
+      "axis": "preference_length",
+      "name": "indian_preference_length=20",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "preference_length": 20
+      },
+      "regime": "indian",
+      "value": 20
+    },
+    {
+      "axis": "protected_score_shift",
+      "name": "indian_protected_score_shift=-1.0",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "preference_length": 10,
+        "protected_score_shift": -1.0
+      },
+      "regime": "indian",
+      "value": -1.0
+    },
+    {
+      "axis": "protected_score_shift",
+      "name": "indian_protected_score_shift=0.0",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "preference_length": 10,
+        "protected_score_shift": 0.0
+      },
+      "regime": "indian",
+      "value": 0.0
+    },
+    {
+      "axis": "protected_score_shift",
+      "name": "indian_protected_score_shift=1.0",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "preference_length": 10,
+        "protected_score_shift": 1.0
+      },
+      "regime": "indian",
+      "value": 1.0
+    },
+    {
+      "axis": "reserve_fraction",
+      "name": "overlapping_reserve_fraction=0.2",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "preference_length": 10,
+        "reserve_fraction": 0.2
+      },
+      "regime": "overlapping",
+      "value": 0.2
+    },
+    {
+      "axis": "reserve_fraction",
+      "name": "overlapping_reserve_fraction=0.4",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "preference_length": 10,
+        "reserve_fraction": 0.4
+      },
+      "regime": "overlapping",
+      "value": 0.4
+    },
+    {
+      "axis": "reserve_fraction",
+      "name": "overlapping_reserve_fraction=0.6",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "preference_length": 10,
+        "reserve_fraction": 0.6
+      },
+      "regime": "overlapping",
+      "value": 0.6
+    },
+    {
+      "axis": "reserve_fraction",
+      "name": "overlapping_reserve_fraction=0.8",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "preference_length": 10,
+        "reserve_fraction": 0.8
+      },
+      "regime": "overlapping",
+      "value": 0.8
+    },
+    {
+      "axis": "priority_noise",
+      "name": "overlapping_priority_noise=0.0",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "heterogeneous_precedence": true,
+        "num_institutions": 20,
+        "num_students": 600,
+        "preference_length": 10,
+        "priority_noise": 0.0
+      },
+      "regime": "overlapping",
+      "value": 0.0
+    },
+    {
+      "axis": "priority_noise",
+      "name": "overlapping_priority_noise=0.5",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "heterogeneous_precedence": true,
+        "num_institutions": 20,
+        "num_students": 600,
+        "preference_length": 10,
+        "priority_noise": 0.5
+      },
+      "regime": "overlapping",
+      "value": 0.5
+    },
+    {
+      "axis": "priority_noise",
+      "name": "overlapping_priority_noise=1.0",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "heterogeneous_precedence": true,
+        "num_institutions": 20,
+        "num_students": 600,
+        "preference_length": 10,
+        "priority_noise": 1.0
+      },
+      "regime": "overlapping",
+      "value": 1.0
+    },
+    {
+      "axis": "transferable_fraction",
+      "name": "overlapping_transferable_fraction=0.0",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "preference_length": 10,
+        "transferable_fraction": 0.0
+      },
+      "regime": "overlapping",
+      "value": 0.0
+    },
+    {
+      "axis": "transferable_fraction",
+      "name": "overlapping_transferable_fraction=0.5",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "preference_length": 10,
+        "transferable_fraction": 0.5
+      },
+      "regime": "overlapping",
+      "value": 0.5
+    },
+    {
+      "axis": "transferable_fraction",
+      "name": "overlapping_transferable_fraction=1.0",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "num_institutions": 20,
+        "num_students": 600,
+        "preference_length": 10,
+        "transferable_fraction": 1.0
+      },
+      "regime": "overlapping",
+      "value": 1.0
+    },
+    {
+      "axis": "transfer_access",
+      "name": "overlapping_transfer_access=0.25",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "heterogeneous_precedence": true,
+        "num_institutions": 20,
+        "num_students": 600,
+        "preference_length": 10,
+        "priority_noise": 0.5,
+        "transfer_access": 0.25
+      },
+      "regime": "overlapping",
+      "value": 0.25
+    },
+    {
+      "axis": "transfer_access",
+      "name": "overlapping_transfer_access=0.5",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "heterogeneous_precedence": true,
+        "num_institutions": 20,
+        "num_students": 600,
+        "preference_length": 10,
+        "priority_noise": 0.5,
+        "transfer_access": 0.5
+      },
+      "regime": "overlapping",
+      "value": 0.5
+    },
+    {
+      "axis": "transfer_access",
+      "name": "overlapping_transfer_access=1.0",
+      "parameters": {
+        "alpha": 0.4,
+        "beta": 0.4,
+        "heterogeneous_precedence": true,
+        "num_institutions": 20,
+        "num_students": 600,
+        "preference_length": 10,
+        "priority_noise": 0.5,
+        "transfer_access": 1.0
+      },
+      "regime": "overlapping",
+      "value": 1.0
+    }
+  ],
+  "schema_version": 1,
+  "source_sha256": "9b5ab72b39113d4d36bbc122174cd533a4ad10c6674b0291ed0d21ff8cf5e22c",
+  "synthetic": true,
+  "timing": "perf_counter; mechanism including weights; excludes generation, input copy, metrics, posthoc support, IO"
+}
