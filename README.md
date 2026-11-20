@@ -5,9 +5,11 @@ Indian vertical reservation market and a market with overlapping eligibility.
 The paper profile contains 32 settings, with 100 paired market draws per setting,
 600 students per market, and 20 institutions. Each setting compares six methods.
 
-The [notebook](dereservation_study/experiments.ipynb) regenerates the reports from the bundled runs.
-The [manifest](dereservation_study/data/paper/manifest.json) records the full design,
-seed, software versions, and source hash of the recorded runs.
+The Indian design fixes expected SC and ST applicant shares at 16.6% and 8.6%
+and sweeps the OBC share over 2%, 10%, 27%, 42%, and 50%. The capacity, list-length,
+and merit-score sweeps use 42% OBC. The
+[notebook](dereservation_study/experiments.ipynb) runs the study and produces
+the tables and figures.
 
 ## Reproduce the reports
 
@@ -26,26 +28,18 @@ python -m pip install -r dereservation_study/requirements.txt
 jupyter lab dereservation_study/experiments.ipynb
 ```
 
-Run all cells with the default `paper` profile. A fresh clone reads the compressed
-archive in `dereservation_study/data/paper/`. An existing local run can supply the same observations.
-The notebook loads the main results, examples, local compliance frontiers, and
-MD timing benchmark, then writes derived tables and PNG/SVG figures to
-`dereservation_study/results/notebook_paper/reports/`. The mechanisms run only when a requested
-profile lacks complete saved results. Smoke and quick profiles use smaller
-markets for new experiments. Keep `RESUME = True` to reuse saved results.
+Run all cells with `RESUME = True`. On the first run, the notebook computes the
+14 revised Indian settings and reuses the bundled results for the 18 overlapping
+settings. It also reuses the saved examples and MD timing benchmark. If the
+archive is absent, the notebook computes these results from the same design and
+seeds. Timings from a fresh run depend on the machine.
 
-To generate the two main sweep reports from the command line:
-
-```sh
-python -m dereservation_study --profile paper
-```
-
-For an independent small run, use `python -m dereservation_study --profile smoke`.
-The `--output` option sets a separate working directory. Use `--no-resume` to
-measure new runs and new timings for the main study. Numerical checkpoints record
-the design, algorithm definitions, core source fingerprint, and environment.
-Reporting reads the archived provenance and validates the requested data coverage.
-The study has no commercial solver dependency.
+The notebook checkpoints each completed market and validates caches against the
+requested design, seeds, and algorithm definitions. It writes the 42% OBC
+summary table, paired welfare counts, and PNG/SVG figures to
+`dereservation_study/results/notebook_indian_demographics/reports/`. Keep the run
+directory to resume or reuse completed results. The study has no commercial
+solver dependency.
 
 ## Mechanisms
 
@@ -71,7 +65,9 @@ the [Aygün and Turhan paper](https://doi.org/10.1287/mnsc.2022.4566).
 
 ## Archived observations
 
-The compressed CSVs contain the observations for the reported mechanisms.
+The compressed CSVs contain the original study, including the overlapping
+observations used by the notebook. The [archive manifest](dereservation_study/data/paper/manifest.json)
+records the design, seed, software versions, and source hash of those runs.
 `pandas.read_csv` reads them directly. Tables join on `instance_id` and
 `algorithm`. Each setting reuses the same seed schedule across mechanisms.
 
